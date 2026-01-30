@@ -1,6 +1,6 @@
 // const isAuthenController = require('./controllers/isAuthenController')
 const UserController = require('./controllers/UserController')
-// const UserAuthenController = require('./controllers/UserAuthenController')
+const UserAuthenController = require('./controllers/UserAuthenController')
 // const BlogController = require('./controllers/BlogController')
 
 // const UploadController = require('./controllers/UploadController')
@@ -16,8 +16,8 @@ module.exports = (app) => {
   app.put('/user/:userId', UserController.put)
   app.delete('/user/:userId', UserController.remove)
   app.get('/user/:userId', UserController.show)
-  // app.post('/login', UserAuthenController.login)
-  // app.post('/register', UserAuthenController.register)
+  app.post('/login', UserAuthenController.login)
+  app.post('/register', UserAuthenController.register)
   // blog route
   // create blog
   // app.post('/blog', BlogController.create)
